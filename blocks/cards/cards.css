@@ -1,27 +1,37 @@
+.cards {
+  width: 100vw; /* Full width of the viewport */
+  max-width: 100%;
+  overflow: hidden;
+}
+
 .cards > ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+  display: flex; /* Use flexbox for full-width alignment */
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
-}
-
-.cards .cards-card-body {
-  margin: 16px;
-}
-
-.cards .cards-card-image {
-  line-height: 0;
+  flex: 1 1 33.33%; /* Makes sure there are 3 images per row */
+  position: relative;
+  overflow: hidden;
 }
 
 .cards > ul > li img {
   width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+  object-fit: cover; /* Ensures the image covers the area */
+  display: block;
+}
+
+.cards .cards-card-body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  text-align: center;
+  color: white;
+  width: 80%;
+  padding: 10px;
 }
