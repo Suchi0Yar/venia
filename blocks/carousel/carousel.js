@@ -40,6 +40,8 @@ function showSlide(block, slideIndex = 0) {
     left: activeSlide.offsetLeft,
     behavior: 'smooth',
   });
+
+  updateActiveSlide(activeSlide);
 }
 
 function bindEvents(block) {
@@ -58,7 +60,6 @@ function bindEvents(block) {
       if (entry.isIntersecting) updateActiveSlide(entry.target);
     });
   }, { threshold: 0.5 });
-  
   block.querySelectorAll('.carousel-slide').forEach((slide) => {
     slideObserver.observe(slide);
   });

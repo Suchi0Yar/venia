@@ -2,19 +2,53 @@ footer {
   background-color: var(--light-color);
   font-size: var(--body-font-size-xs);
 }
-
-footer .footer > div {
+footer .footer{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates flexible columns */
+  gap: 20px; 
+}
+footer .footer >div{
+  border-top: rgb(18, 3, 3) 2px;
+  
   margin: auto;
-  max-width: 1200px;
   padding: 40px 24px 24px;
+}
+
+/* Ensure each section becomes a column */
+.footer-column {
+  flex: 1;
+  min-width: 180px; /* Ensures proper column alignment */
+  margin-bottom: 20px;
+}
+
+.footer li {
+  list-style: none;
 }
 
 footer .footer p {
   margin: 0;
 }
 
-@media (width >= 900px) {
-  footer .footer > div {
-    padding: 40px 32px 24px;
+/* Social Icons in a horizontal row */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-column {
+    min-width: 100%;
   }
 }

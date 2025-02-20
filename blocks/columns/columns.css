@@ -1,10 +1,28 @@
 .columns > div {
   display: flex;
   flex-direction: column;
+  margin-left: 10%;
+}
+.columns > div > div:first-child {
+  flex: 1.5; /* Increases the width of the first column */
+}
+.columns .columns-img-col {
+  text-align: right; 
 }
 
-.columns img {
-  width: 100%;
+.columns .columns-img-col img {
+  transform: translateY(-100px);
+  width: 100%; /* Adjust size if needed */
+  max-width: 26rem; /* Optional size limit */
+  height: auto; /* Maintain aspect ratio */
+  display: block;
+}
+
+.columns h2,
+.columns h3,
+.columns p {
+  text-align: center;
+  width: 100%; /* Ensures full width for centering */
 }
 
 .columns > div > div {
@@ -17,15 +35,37 @@
 
 .columns > div > .columns-img-col img {
   display: block;
+  margin-left: 1rem;
 }
-
+.columns h2 {
+  font-size: 4rem; /* Adjust size as needed */
+  font-weight: 400; /* Optional: Make it bold */
+  line-height: 1.2; /* Adjust line spacing */
+}
+.columns h3{
+  line-height: 1;
+  font-size: 3rem; 
+  font-weight: 400;
+}
+.columns p{
+  font-weight: 400;
+}
+.columns a{
+  text-decoration: underline !important; /* Ensures underline is visible */
+  font-weight: normal; /* Keeps the text normal */
+  color: black !important; /* Uses the default text color */
+  background-color: transparent !important;
+}
 @media (width >= 900px) {
   .columns > div {
     align-items: center;
     flex-direction: unset;
     gap: 24px;
   }
-
+  .columns img {
+    width: 60%; /* Reduce width further on large screens */
+    max-width: 350px;
+  }
   .columns > div > div {
     flex: 1;
     order: unset;

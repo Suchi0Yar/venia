@@ -2,34 +2,46 @@
   width: 100vw; /* Full width of the viewport */
   max-width: 100%;
   overflow: hidden;
+  margin-bottom: 4rem;
 }
-
-.cards > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex; /* Use flexbox for full-width alignment */
-  justify-content: center;
-  flex-wrap: wrap;
+.cards .cards-card-body h2 {
+  font-size: 3.2rem; /* Increase size */
+  font-weight: 400; /* Make it stand out */
+  
 }
-
-.cards > ul > li {
-  flex: 1 1 33.33%; /* Makes sure there are 3 images per row */
-  position: relative;
-  overflow: hidden;
-}
+.cards .cards-card-body p {
+  font-weight: 400; /* Make it stand out */
+  }
+  .cards > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Use flexbox for full-width alignment */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px; /* Adds gap between the cards */
+  }
+  
+  .cards > ul > li {
+    flex: 1 1 calc(33.33% - 20px); /* Ensures 3 images per row while considering the gap */
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px; /* Adds vertical spacing */
+  }
+  
 
 .cards > ul > li img {
   width: 100%;
   object-fit: cover; /* Ensures the image covers the area */
   display: block;
+  
 }
 
 .cards .cards-card-body {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -80%);
+  transform: translate(-50%, -60%);
   text-align: center;
   color: white;
   width: 80%;

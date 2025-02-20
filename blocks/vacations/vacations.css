@@ -1,0 +1,55 @@
+.vacations > div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* First column: Image (Make it wider) */
+.vacations > div > div:first-child {
+    flex: 3; /* Increase width */
+    order: 0;
+    margin-top: 3rem;
+}
+
+/* Second column: Text (Reduce width, increase height) */
+.vacations > div > div:last-child {
+    flex: 1; 
+    order: 1;
+    background-color: rgb(27, 37, 44);
+    color: white;
+    margin-top: -30px; 
+    padding: 1rem 2rem 2rem 2rem; /* Reduce padding */
+    min-height: 400px;
+    text-align: center;  
+}
+.vacations h2 {
+    margin-top: 4rem 0 -1rem 0;
+    font-size: 4rem; /* Adjust size as needed */
+    font-weight: 400; /* Optional: Make it bold */
+    line-height: 1.2; /* Adjust line spacing */
+}
+  .vacations p{
+    margin-bottom: -1rem;
+    font-weight: 400;
+  }
+  .vacations a{
+    text-decoration: underline !important; /* Ensures underline is visible */
+    font-weight: normal; /* Keeps the text normal */
+    background-color: transparent !important;
+  }
+
+/* Two-column layout for larger screens */
+@media (min-width: 900px) {
+    .vacations > div {
+        flex-direction: row;
+         /* Ensure both columns take full height */
+    }
+
+    .vacations > div > div:first-child {
+        flex: 2.5; /* Make image column wider */
+    }
+
+    .vacations > div > div:last-child {
+        flex: 1; /* Reduce text column width */
+        min-height: 500px; /* Increase height */
+    }
+}

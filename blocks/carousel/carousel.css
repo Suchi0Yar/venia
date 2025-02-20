@@ -73,6 +73,7 @@
   margin-top: 5rem;
 }
 
+
 .carousel .carousel-slide-indicator button {
   width: 1rem;
   height: 1rem;
@@ -137,9 +138,20 @@
   left: calc(50% - 2px);
 }
 .carousel .carousel-slide-content h2 {
-  font-size: 5rem;
+  margin-top: 1rem;
+  font-size: 3rem;
+  line-height: 1.25;
+  font-weight: 400;
 }
-
+.carousel .carousel-slide-content p {
+  font-weight: 400;
+}
+.carousel .carousel-slide-content a{
+  text-decoration: underline; /* Ensures underline is visible */
+  font-weight: normal; /* Keeps the text normal */
+  color: inherit; /* Uses the default text color */
+  background-color: transparent !important;
+}
 @media (width >= 600px) {
   .carousel .carousel-navigation-buttons {
     left: 24px;

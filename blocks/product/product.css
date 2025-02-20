@@ -1,0 +1,54 @@
+
+.product-grid {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to new rows */
+    gap: 20px; /* Spacing between rows and products */
+    justify-content: center; /* Center the grid */
+}
+
+.product-row {
+    display: flex;
+    flex-direction: row; /* This is the crucial fix! */
+    flex-wrap: wrap; /* Products wrap within the row */
+    gap: 20px; /* Spacing between products in a row */
+    width: 100%; /* Row takes full width */
+    justify-content: center; /* Center products in the row */
+}
+
+
+.product {
+    width: 260px;
+    padding: 10px;
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-name {
+    margin-bottom: 5px;
+}
+
+.product-price {
+    margin-bottom: 10px;
+}
+
+.add-to-cart-btn {
+    background-color: #1f63e0; /* Green */
+    border: none;
+    color: white;
+    padding: 9px 40px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    text-align: center;
+}
