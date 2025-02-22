@@ -1,6 +1,6 @@
 export default async function decorate(block) {
     try {
-        const response = await fetch("http://localhost:3000/product.json"); 
+        const response = await fetch("http://localhost:3000/query-index.json");
 
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
@@ -23,27 +23,27 @@ export default async function decorate(block) {
 
             // Product Image
             const img = document.createElement("img");
-            img.src = item["product image"] || "https://via.placeholder.com/150";
-            img.alt = item.Name || "Product Image";
-            img.classList.add("product-image");
+            img.src = item.pimage || "https://via.placeholder.com/150";
+            img.alt = item.pname || "Product Image";
+            img.classList.add("pimage");
 
             // Product Name
             const name = document.createElement("h3");
-            name.textContent = item.Name || "Unnamed Product";
-            name.classList.add("product-name");
+            name.textContent = item.pname || "Unnamed Product";
+            name.classList.add("pname");
 
             // Product Price
             const price = document.createElement("p");
-            price.textContent = item.Price ? `$${item.Price}` : "Price Not Available";
-            price.classList.add("product-price");
+            price.textContent = item.price ? `${item.price}` : "Price Not Available";
+            price.classList.add("price");
 
             // Add to Cart Button
             const addToCartBtn = document.createElement("button");
             addToCartBtn.textContent = "ADD TO CART";
             addToCartBtn.classList.add("add-to-cart-btn");
             addToCartBtn.addEventListener("click", () => {
-                console.log(`Added to cart: ${item.Name}`);
-                alert(`${item.Name} added to cart!`);
+                console.log(`Added to cart: ${item.pname}`);
+                alert(`${item.pname} added to cart!`);
             });
 
             // Append elements to product div
@@ -61,3 +61,6 @@ export default async function decorate(block) {
         block.innerHTML = `<p class="error-message">Failed to load data.</p>`;
     }
 }
+
+
+

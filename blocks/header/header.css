@@ -233,18 +233,18 @@ header nav .nav-sections ul > li > ul > li {
     display: none;
     position: relative;
   }
-
   header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
-    display: block;
+    display: flex;
     position: absolute;
-    left: -24px;
-    width: 200px;
-    top: 150%;
-    padding: 16px;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 95vw;
+    left: 50%; /* Start from center */
+    transform: translateX(-54%); /* Shift back to center perfectly */
+    top: 190%;
+    padding: 15px;
     background-color: var(--light-color);
-    white-space: initial;
   }
-
   header nav .nav-sections .default-content-wrapper > ul > li > ul::before {
     content: '';
     position: absolute;
@@ -266,3 +266,43 @@ header nav .nav-sections ul > li > ul > li {
 header nav .nav-tools {
   grid-area: tools;
 }
+.section.icons-container {
+  display: flex;
+  justify-content: space-between; /* Pushes content to the sides */
+  align-items: center; /* Aligns them vertically */
+  width: 100%; /* Ensures full width */
+}
+
+.default-content-wrapper {
+  flex-grow: 1; /* Takes up remaining space on the left */
+}
+
+.icons-wrapper {
+  margin-top: -22px;
+  display: flex;
+  justify-content: flex-end; 
+}
+li {
+  display: flex;
+  align-items: center;  
+  gap: 8px; 
+}
+
+.icon-wrapper .icon-search a,
+.icon-signin a {
+  top: -8px; 
+}
+
+
+.nav-drop[aria-expanded="true"] ul {
+  display: flex !important; 
+  flex-direction: row !important; 
+  opacity: 1;
+  visibility: visible;
+ 
+}
+
+.nav-drop ul li {
+  white-space: nowrap; /* Prevents wrapping */
+}
+
