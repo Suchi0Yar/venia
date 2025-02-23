@@ -3,53 +3,92 @@
     flex-direction: column;
 }
 
-/* First column: Image (Make it wider) */
+/* First column: Image (Larger width) */
 .vacations > div > div:first-child {
-    flex: 3; /* Increase width */
-    order: 0;
-    margin-top: 3rem;
+    flex: 3;
+    order: 0; /* Image first */
+    margin-top: 4rem;
 }
 
-/* Second column: Text (Reduce width, increase height) */
+
 .vacations > div > div:last-child {
-    flex: 1; 
-    order: 1;
+    flex: 1;
+    order: 1; /* Text second */
     background-color: rgb(27, 37, 44);
     color: white;
-    margin-top: -30px; 
-    padding: 1rem 2rem 2rem 2rem; /* Reduce padding */
-    min-height: 400px;
-    text-align: center;  
+    padding: 1rem;
+    min-height: 250px; /* Reduce height for smaller screens */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertically center */
+    align-items: center; 
+    top: -40px; 
 }
-.vacations h2 {
-    margin-top: 4rem 0 -1rem 0;
-    font-size: 4rem; /* Adjust size as needed */
-    font-weight: 400; /* Optional: Make it bold */
-    line-height: 1.2; /* Adjust line spacing */
-}
-  .vacations p{
-    margin-bottom: -1rem;
-    font-weight: 400;
-  }
-  .vacations a{
-    text-decoration: underline !important; /* Ensures underline is visible */
-    font-weight: normal; /* Keeps the text normal */
-    background-color: transparent !important;
-  }
 
-/* Two-column layout for larger screens */
+
+.vacations h2 {
+    font-size: 2rem; 
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+.vacations p {
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.vacations a {
+    text-decoration: underline !important;
+    font-weight: normal;
+    background-color: transparent !important;
+}
+
+/* Responsive for 300px screens */
+@media (max-width: 300px) {
+    .vacations h2 {
+        font-size: 2.5rem; /* Increased size for small screens */
+    }
+    .vacations p {
+        font-size: 0.8rem;
+    }
+
+    .vacations > div > div:last-child {
+        padding: 0.8rem;
+        min-height: 250px;
+    }
+}
+
+/* Medium screens */
+@media (min-width: 600px) {
+    .vacations h2 {
+        font-size: 3.5rem; /* Increased size for medium screens */
+    }
+
+    .vacations p {
+        font-size: 1rem;
+    }
+
+    .vacations > div > div:last-child {
+        min-height: 350px;
+    }
+}
+
+/* Large screens */
 @media (min-width: 900px) {
     .vacations > div {
         flex-direction: row;
-         /* Ensure both columns take full height */
     }
-
+    .vacations h2 {
+        font-size: 4.5rem; /* Increased size for large screens */
+    }
     .vacations > div > div:first-child {
         flex: 2.5; /* Make image column wider */
     }
 
     .vacations > div > div:last-child {
         flex: 1; /* Reduce text column width */
-        min-height: 500px; /* Increase height */
+        min-height: 500px;
+        top:-50px
     }
 }
