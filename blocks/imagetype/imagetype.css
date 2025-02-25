@@ -1,0 +1,129 @@
+.imagetype-container {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: start;
+  width: 100%;
+  max-width: 1200px; /* Ensures content doesn't stretch too much */
+  margin: 0 auto; /* Centers the container *//* Adds some padding for better spacing */
+}
+
+/* Image section */
+.imagetype {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns for images */
+  gap: 16px;
+}
+/* First column images (smaller) */
+.imagetype .imagetype-img-col img {
+  width: 100%;
+  height: auto;
+  max-width: 180px; /* Smaller size */
+  max-height: 180px;
+  object-fit: cover;
+}
+/* First column: Stack 3 images */
+.imagetype .imagetype-img-col {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  gap: 8px;
+  box-shadow: 4px 4px 10px rgb(128, 210, 237);
+ }
+ .imagetype > div:first-child img {
+  box-shadow: 4px 4px 10px rgb(128, 210, 237);
+ }
+ .imagetype > div:nth-child(3) img{
+  box-shadow: 4px 4px 10px rgb(128, 210, 237);
+  transform: translateY(-13.9rem);
+ }
+ .imagetype > div:nth-child(2) img {
+  max-width:25rem; /* Increase as needed */
+  max-height: 252rem; /* Adjust height accordingly */
+ }
+/* Images should be responsive */
+.imagetype img {
+  height: auto;
+  max-width: 200px;
+  max-height:140px;
+  object-fit: cover;
+}
+
+/* Information Section */
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+  width: 100%;
+  padding: 0;
+ 
+}
+.information div{
+  border-bottom: 0.5px solid #ddd ; 
+}
+.information div p{
+  margin-top: 20px;
+  font-weight: 400;
+}
+.information p {
+  margin: 0;
+  font-size: 15px;
+  display: grid;
+  gap: 50px;
+}
+
+.information strong {
+  font-size: 18px;
+}
+
+.information .icon-wishlist {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .imagetype-container {
+      grid-template-columns: 1fr; /* Make it a single column on small screens */
+  }
+
+  .imagetype {
+      grid-template-columns: 1fr;
+  }
+
+  .imagetype .imagetype-img-col {
+      grid-template-rows: unset;
+  }
+}
+
+.description {
+  border: 2px 0 2px 0 ;
+  border-top: 1px solid #ddd ; 
+  border-bottom: 1px solid #ddd ; 
+  font-size: 17px;
+  font-weight: 400;
+  display: flex;
+  justify-content: flex-end; 
+  gap: 7rem; 
+  width: 100%;
+}
+
+.description > div {
+  width: 48%; 
+}
+
+.description > div:last-child { 
+  margin-left: 18rem; /* Moves Details to the right */
+  
+}
+.description div ul {
+  padding-left: 20px;
+  list-style-type: disc !important;
+}
+
+.description div ul li {
+  display: list-item !important; 
+}
+
+.description div:nth-child(2) { /* Targeting Details */
+  align-items:flex-end;
+}
