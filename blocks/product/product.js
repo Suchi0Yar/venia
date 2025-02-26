@@ -1,4 +1,6 @@
+
 export default async function decorate(block) {
+    
     try {
         const response = await fetch("http://localhost:3000/query-index.json");
 
@@ -133,4 +135,6 @@ export default async function decorate(block) {
         block.innerHTML = `<p class="error-message">Failed to load data.</p>`;
     }
 }
+
+
 

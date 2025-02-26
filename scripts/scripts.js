@@ -12,7 +12,7 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
-
+import { getMetadata } from "../../scripts/aem.js";
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
@@ -47,6 +47,8 @@ async function loadFonts() {
 function buildAutoBlocks(main) {
   try {
     buildHeroBlock(main);
+    createBreadCrumb();
+
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
@@ -108,6 +110,18 @@ async function loadLazy(doc) {
 
   loadCSS(`${window.hlx.codeBasePath}/styles/lazy-styles.css`);
   loadFonts();
+}
+
+function createBreadCrumb() {
+  if (getMetadata('breadcrumb') !== 'true') return;
+
+  const main = document.querySelector('body main');
+  if (!main) return;
+
+  const breadcrumbSection = document.createElement('div');
+  breadcrumbSection.append(buildBlock('breadcrumb', { elems: [] }));
+
+  main.prepend(breadcrumbSection);
 }
 
 /**
