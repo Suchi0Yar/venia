@@ -314,7 +314,10 @@ header nav .nav-tools {
   display: flex;
   justify-content: space-between; 
   width: 100%;
-  gap:16px
+  gap:16px;
+  & li::marker {
+    content: '';
+  }
 }
 
 .nav-tools .default-content-wrapper a{
