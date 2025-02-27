@@ -1,33 +1,130 @@
 .columns > div {
   display: flex;
   flex-direction: column;
+  margin-left: 5%;
 }
 
-.columns img {
+.columns > div > div:first-child {
+  flex: 1.2; /* First column takes more space */
+}
+
+.columns .columns-img-col {
+  text-align: center; /* Center image on smaller screens */
+}
+
+.columns .columns-img-col img {
+  transform: none; /* Remove negative translation for small screens */
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+  display: block;
+  margin: auto; /* Center the image */
+}
+
+.columns h2,
+.columns h3,
+.columns p {
+  text-align: center;
   width: 100%;
 }
 
 .columns > div > div {
-  order: 1;
+  order: 1; /* Content first */
 }
 
 .columns > div > .columns-img-col {
-  order: 0;
+  order: 2; /* Image second */
 }
 
-.columns > div > .columns-img-col img {
-  display: block;
+.columns h2 {
+  font-size: 2.5rem; /* Increased font size */
+  font-weight: 400;
+  line-height: 1.2;
+}
+.columns h3 {
+  line-height: 1;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
-@media (width >= 900px) {
+.columns p {
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.columns a {
+  text-decoration: underline !important;
+  font-weight: normal;
+  color: black !important;
+  background-color: transparent !important;
+}
+
+/* Responsive for 300px screens */
+@media (max-width: 300px) {
+  .columns > div {
+    margin-left: 2%;
+  }
+
+  .columns h2 {
+    font-size: 1.8rem;
+  }
+
+  .columns h3 {
+    font-size: 1.3rem;
+  }
+
+  .columns p {
+    font-size: 0.8rem;
+  }
+
+  .columns .columns-img-col img {
+    max-width: 16rem;
+  }
+}
+
+/* Medium screens */
+@media (min-width: 600px) {
+  .columns > div {
+    flex-direction: column;
+  }
+
+  .columns h2 {
+    font-size: 2.5rem;
+  }
+
+  .columns h3 {
+    font-size: 2rem;
+  }
+
+  .columns p {
+    font-size: 1rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 900px) {
   .columns > div {
     align-items: center;
-    flex-direction: unset;
+    flex-direction: row;
     gap: 24px;
+  }
+
+  .columns .columns-img-col img {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .columns > div > div:first-child {
+    flex: 1; /* Further decrease width of first column */
   }
 
   .columns > div > div {
     flex: 1;
     order: unset;
+  }
+
+  /* Move second image slightly up */
+  .columns > div > .columns-img-col:nth-of-type(2) img {
+    transform: translateY(-50px);
   }
 }

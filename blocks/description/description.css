@@ -1,0 +1,82 @@
+/* Base styles */
+.description {
+    border: 2px 0 2px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: 17px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    gap: 7rem;
+    width: 100%;
+  }
+  
+  .description > div {
+    width: 48%;
+  }
+  
+  
+  .description div ul {
+    padding-left: 20px;
+    list-style-type: disc !important;
+  }
+  
+  .description div ul li {
+    display: list-item !important;
+  }
+  
+  .description div:nth-child(2) { /* Targeting Details */
+    align-items: flex-end;
+  }
+  
+  /* Media Queries for responsiveness */
+  @media (max-width: 900px) {
+    .description {
+      flex-direction: column;
+      gap: 3rem;
+    }
+  
+    .description > div {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .description div:nth-child(2) { /* Targeting Details */
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .description {
+      font-size: 15px;
+    }
+  
+    .description > div {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .description div {
+      display: flex;
+      flex-direction: column;
+   
+    }
+  }
+  
+  @media (max-width: 360px) {
+    .description {
+      font-size: 13px;
+    }
+  
+    .description > div {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .description div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  

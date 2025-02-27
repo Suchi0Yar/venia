@@ -1,0 +1,129 @@
+.default-content-wrapper h2 {
+    font-size: 3.5rem;
+    font-weight: 400;
+    text-align: center;
+}
+
+.product-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    width: 95vw;
+    max-width: 100%;
+    justify-content: center;
+    padding: 0 20px;
+    overflow: hidden;
+    margin: 4rem auto 0 4rem;
+}
+
+.product {
+    display: grid;
+    grid-template-rows: auto auto auto; /* Ensures each product has structured sections */
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideIn 0.5s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.pname, .price {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.product-actions {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
+}
+ .add-to-cart-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 40px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border-radius: 2rem;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #22069c;
+}
+
+.wishlist-icon {
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    filter: invert(30%);
+    transition: transform 0.2s ease-in-out;
+    justify-self: center;
+    margin-top: 1rem;
+}
+
+.wishlist-icon:hover {
+    transform: scale(1.2);
+}
+
+/* Responsive Grid Adjustments */
+@media (min-width: 1024px) {
+    .product-wrapper {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .product-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .product-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .product-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 5px;
+    }
+}
+
+.dots-container {
+    margin-top: 2rem;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 8px;
+    justify-content: center;
+}
+
+.dot {
+    width: 18px;
+    height: 18px;
+    background: lightgray;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.dot.active {
+    background: black;
+}
