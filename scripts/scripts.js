@@ -1,3 +1,4 @@
+
 import {
   buildBlock,
   loadHeader,
@@ -11,6 +12,7 @@ import {
   loadSection,
   loadSections,
   loadCSS,
+  getMetadata
 } from './aem.js';
 
 /**
@@ -27,6 +29,25 @@ function buildHeroBlock(main) {
     main.prepend(section);
   }
 }
+
+
+//build breadcrumb
+
+function generateBreadcrumb() {
+  if (getMetadata('breadcrumb') !== 'true') return;
+
+  const main = document.querySelector('main');
+  if (!main) return;
+
+  const breadcrumbWrapper = document.createElement('div');
+  breadcrumbWrapper.className = 'breadcrumb-wrapper';
+
+  const breadcrumbBlock = buildBlock('breadcrumb', { elems: [] });
+  breadcrumbWrapper.appendChild(breadcrumbBlock);
+  
+  main.prepend(breadcrumbWrapper);
+}
+
 
 /**
  * load fonts.css and set a session storage flag
@@ -46,9 +67,11 @@ async function loadFonts() {
  */
 function buildAutoBlocks(main) {
   try {
-    buildHeroBlock(main);
-    createBreadcrumb();
 
+    //call here
+    generateBreadcrumb();
+    buildHeroBlock(main);
+    
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);
@@ -112,18 +135,6 @@ async function loadLazy(doc) {
   loadFonts();
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  initializeProductDetails();
-});
-
-function initializeProductDetails() {
-  const productDetailsBlock = document.querySelector('.product'); // Ensure this class exists
-  if (productDetailsBlock) {
-      decorate(productDetailsBlock);
-  }
-}
-
-
 /**
  * Loads everything that happens a lot later,
  * without impacting the user experience.
@@ -141,29 +152,3 @@ async function loadPage() {
 }
 
 loadPage();
-
-
-function createBreadcrumb() {
-  const isBreadcrumbEnabled = getMetadata('breadcrumb')?.toLowerCase() === 'true';
-  const breadcrumbExists = document.querySelector('.breadcrumb');
-
-  if (!isBreadcrumbEnabled || breadcrumbExists) {
-      return; // Exit if breadcrumb is disabled or already exists
-  }
-
-  const breadcrumb = buildBlock('breadcrumb', '');
-
-  if (breadcrumb) {
-      const wrapper = document.createElement('div');
-      wrapper.className = 'breadcrumb-wrapper';
-      wrapper.appendChild(breadcrumb);
-
-      const mainElement = document.querySelector('main');
-      if (mainElement) {
-          mainElement.prepend(wrapper);
-      }
-
-      loadBlock(breadcrumb);
-  }
-}
-

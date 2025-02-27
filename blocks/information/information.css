@@ -143,7 +143,7 @@
 
 
 .cart-button {
-    background-color: #ddd;
+    background-color: #3678ea;
     padding: 10px 15px;
     border: none;
     cursor: pointer;
@@ -151,6 +151,6 @@
 }
 
 .cart-button.disabled {
-    opacity: 0.5;
+   
     cursor: not-allowed;
 }
