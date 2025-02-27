@@ -56,8 +56,8 @@
 .imagetype .imagetype-img-col img {
   width: 100%;
   height: auto;
-  max-width: 180px; /* Smaller size */
-  max-height: 180px;
+  max-width: 200px; /* Smaller size */
+  max-height: 200px;
   object-fit: cover;
 }
 /* First column: Stack 3 images */
@@ -75,7 +75,7 @@
   max-height: 252rem; 
  }
 
-.imagetype img {
+ .imagetype img {
   height: auto;
   object-fit: cover;
 }
