@@ -12,7 +12,7 @@ import {
   loadSections,
   loadCSS,
 } from './aem.js';
-import { getMetadata } from "../../scripts/aem.js";
+
 /**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
@@ -47,7 +47,7 @@ async function loadFonts() {
 function buildAutoBlocks(main) {
   try {
     buildHeroBlock(main);
-    createBreadCrumb();
+    createBreadcrumb();
 
   } catch (error) {
     // eslint-disable-next-line no-console
@@ -112,17 +112,17 @@ async function loadLazy(doc) {
   loadFonts();
 }
 
-function createBreadCrumb() {
-  if (getMetadata('breadcrumb') !== 'true') return;
+document.addEventListener('DOMContentLoaded', () => {
+  initializeProductDetails();
+});
 
-  const main = document.querySelector('body main');
-  if (!main) return;
-
-  const breadcrumbSection = document.createElement('div');
-  breadcrumbSection.append(buildBlock('breadcrumb', { elems: [] }));
-
-  main.prepend(breadcrumbSection);
+function initializeProductDetails() {
+  const productDetailsBlock = document.querySelector('.product'); // Ensure this class exists
+  if (productDetailsBlock) {
+      decorate(productDetailsBlock);
+  }
 }
+
 
 /**
  * Loads everything that happens a lot later,
@@ -141,3 +141,29 @@ async function loadPage() {
 }
 
 loadPage();
+
+
+function createBreadcrumb() {
+  const isBreadcrumbEnabled = getMetadata('breadcrumb')?.toLowerCase() === 'true';
+  const breadcrumbExists = document.querySelector('.breadcrumb');
+
+  if (!isBreadcrumbEnabled || breadcrumbExists) {
+      return; // Exit if breadcrumb is disabled or already exists
+  }
+
+  const breadcrumb = buildBlock('breadcrumb', '');
+
+  if (breadcrumb) {
+      const wrapper = document.createElement('div');
+      wrapper.className = 'breadcrumb-wrapper';
+      wrapper.appendChild(breadcrumb);
+
+      const mainElement = document.querySelector('main');
+      if (mainElement) {
+          mainElement.prepend(wrapper);
+      }
+
+      loadBlock(breadcrumb);
+  }
+}
+

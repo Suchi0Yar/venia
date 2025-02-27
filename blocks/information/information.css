@@ -76,51 +76,6 @@
   border: 2px solid;
   border-radius: 6px;
 }
-.color-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.color-button {
-    width: 45px;
-    height: 45px;
-    border: 2px solid #ddd;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: border-color 0.3s;
-    font-size: 0; /* Hide text */
-    outline: none;
-    background-color: inherit; /* Ensures the background doesn't change */
-}
-
-
-.peach {
-    background-color: #FAD2B7 !important;
-}
-
-.khaki {
-    background-color: #F7E7CE !important;
-}
-
-.rain {
-    background-color: #BFD7EA !important;
-}
-
-.mint {
-    background-color: #C1E1C1 !important;
-}
-.size-wrapper{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 5px;
-    border-bottom: 1px solid #ddd;
-}
-
-.size-wrapper div {
-    display: flex;
-    gap: 8px; 
-}
 
 .size-wrapper button {
     width: 40px;  
@@ -139,23 +94,63 @@
     padding: 20px;
     display: flex;
     border: none;
-    flex-direction: column; /* Stack button & favorite section */
-    align-items: center; /* Center content horizontally */
-    justify-content: center; /* Center content vertically */
-    text-align: center; /* Center text */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
 }
 .cart-button {
-    margin-bottom: 2rem; /* Adds space below the ADD TO CART button */
+    margin-bottom: 2rem; 
 }
 .information div:nth-child(5) p {
     display: flex;
-    align-items: center; /* Align icon and text on the same line */
-    justify-content: center; /* Ensure both are centered */
-    gap: 1rem; /* Space between icon and text */
+    align-items: center; 
+    justify-content: center; 
+    gap: 1rem; 
 }
 
 .size-wrapper button:hover, 
 .size-wrapper button.active {
     background: #000;
     color: #fff;
+}
+.size-buttons button {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #000;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 5px; 
+}
+
+.color-buttons {
+  display: flex; 
+  gap: 10px; 
+  flex-wrap: wrap; 
+}
+
+.color-buttons button {
+  border-radius: 5px; 
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+
+.cart-button {
+    background-color: #ddd;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.cart-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }

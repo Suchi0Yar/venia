@@ -50,11 +50,10 @@
     width: 100%;
     justify-content: center;
 }
-
-.add-to-cart-btn {
+ .add-to-cart-btn {
     background-color: #007bff;
     color: white;
-    padding: 8px 50px;
+    padding: 8px 40px;
     font-weight: bold;
     font-size: 0.8rem;
     border-radius: 2rem;
