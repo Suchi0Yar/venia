@@ -42,7 +42,7 @@ function renderProducts(products, startIndex, productWrapper, productsPerPage) {
         productLink.href = `${item.path}`;
  
         const img = document.createElement("img");
-img.src = item.pimage || "https://via.placeholder.com/150";
+        img.src = item.pimage || "https://via.placeholder.com/150";
         img.alt = item.pname || "Product Image";
         img.classList.add("pimage");
         productLink.appendChild(img);
