@@ -1,5 +1,5 @@
 .cards {
-  width: 100vw; /* Full width of the viewport */
+  width: 100%; /* Full width of the viewport */
   max-width: 100%;
   overflow: hidden;
   margin-bottom: 4rem;
@@ -44,10 +44,10 @@
   transform: translate(-50%, -60%);
   text-align: center;
   color: white;
-  width: 80%;
+  width: 100%;
   padding: 10px;
 }
-@media (min-width: 300px) {
+@media (min-width: 360px) {
   .cards > ul > li {
     flex: 1 1 calc(100% - 20px); /* 1 card per row */
   }
