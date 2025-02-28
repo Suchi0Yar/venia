@@ -315,9 +315,7 @@ header nav .nav-tools {
   justify-content: space-between; 
   width: 100%;
   gap:16px;
-  & li::marker {
-    content: '';
-  }
+  
 }
 
 .nav-tools .default-content-wrapper a{
@@ -325,16 +323,40 @@ header nav .nav-tools {
   font-weight: 400;
 }
 
-@media (max-width: 899px) {
+@media (max-width: 900px) {
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
-    display: none !important;  
     position: static; 
     visibility: hidden;
     opacity: 0;
   }
-}
+  /* Show nav-tools inside the expanded menu */
+  header nav[aria-expanded="true"] .nav-tools {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+
+ 
+  }
+
 @media (max-width: 600px){
-  .nav-tools{
+  header .nav-tools .default-content-wrapper ul{
+   display: flex;
+  }
+  /* Hide nav-tools outside of the hamburger menu */
+  .nav-tools {
     display: none;
   }
+
 }
+@media (max-width: 360px){
+  header .nav-tools .default-content-wrapper ul{
+   display: flex;
+   flex-wrap: nowrap;
+  }}
+header .nav-tools .default-content-wrapper ul li{
+  display: flex;
+}
+
