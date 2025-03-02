@@ -5,7 +5,10 @@ header .nav-wrapper {
   z-index: 2;
   padding: 6px;
   position: fixed;
+<<<<<<< Updated upstream
   border-bottom: 2px solid lightgray;
+=======
+>>>>>>> Stashed changes
 }
 
 header nav {
@@ -30,6 +33,7 @@ header nav[aria-expanded='true'] {
     'tools tools' var(--nav-height) / auto 1fr;
   overflow-y: auto;
   min-height: 100dvh;
+  
 }
 
 @media (width >= 900px) {
@@ -54,7 +58,11 @@ header nav p {
 
 header nav a:any-link {
   color: currentcolor;
+<<<<<<< Updated upstream
   text-decoration: none;
+=======
+  
+>>>>>>> Stashed changes
 }
 
 /* hamburger */
@@ -173,12 +181,15 @@ header nav .nav-sections ul {
   font-size: 16px;
   font-family: sans-serif;
 }
+<<<<<<< Updated upstream
 
 header nav .nav-sections ul > li {
   font-weight: lighter;
   
 }
 
+=======
+>>>>>>> Stashed changes
 header nav .nav-sections ul > li > ul {
   margin-top: 0;
   padding: .5rem 0rem;
@@ -279,6 +290,7 @@ header nav .nav-sections ul > li > ul > li {
   header nav .nav-sections .default-content-wrapper > ul > li {
     position: relative; /* Ensures the dropdown positions correctly */
   }
+<<<<<<< Updated upstream
   
   header nav .nav-sections .default-content-wrapper > ul > li:hover > ul {
     display: flex;
@@ -295,6 +307,25 @@ header nav .nav-sections ul > li > ul > li {
     align-items: center;
     gap: 5rem;
     z-index: 1000; /* Ensures it appears above other content */
+=======
+
+  header nav .nav-sections .default-content-wrapper > ul > li > ul {
+    display: none;
+    position: relative;
+  }
+
+  header nav .nav-sections .default-content-wrapper > ul > li[aria-expanded='true'] > ul {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90vw;
+    left: 50%; /* Start from center */
+    transform: translateX(-54%); /* Shift back to center perfectly */
+    top: 190%;
+    padding: 15px;
+    background-color: var(--light-color);
+>>>>>>> Stashed changes
   }
 
   header nav .nav-tools {
@@ -305,11 +336,15 @@ header nav .nav-sections ul > li > ul > li {
   }
 }
 
+<<<<<<< Updated upstream
 header nav .nav-tools {
   grid-area: tools;
 }
 
 .nav-tools .default-content-wrapper ul{
+=======
+.section.icons-container {
+>>>>>>> Stashed changes
   display: flex;
   justify-content: space-between; 
   width: 100%;
@@ -317,6 +352,7 @@ header nav .nav-tools {
   
 }
 
+<<<<<<< Updated upstream
 .nav-tools .default-content-wrapper a{
   font-size: 16px;
   font-weight: 400;
@@ -357,5 +393,28 @@ header nav .nav-tools {
   }}
 header .nav-tools .default-content-wrapper ul li{
   display: flex;
+=======
+.icons-wrapper {
+  margin-top: -22px;
+  display: flex;
+  justify-content: flex-end; 
+}
+li {
+  display: flex;
+  align-items: center;  
+  gap: 8px; 
+}
+
+.nav-drop[aria-expanded="true"] ul {
+  display: flex !important; 
+  flex-direction: row !important; 
+  opacity: 1;
+  visibility: visible;
+ 
+}
+
+.nav-drop ul li {
+  white-space: nowrap; /* Prevents wrapping */
+>>>>>>> Stashed changes
 }
 
