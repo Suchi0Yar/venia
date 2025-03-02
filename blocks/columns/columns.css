@@ -28,9 +28,7 @@
   width: 100%;
 }
 
-.columns > div > div {
-  order: 1; /* Content first */
-}
+
 
 .columns > div > .columns-img-col {
   order: 2; /* Image second */

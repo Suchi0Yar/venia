@@ -79,8 +79,8 @@
 }
 
 .carousel .carousel-slide-indicator button {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   margin: 0;
   padding: 0;
   border-radius: 50%;
@@ -128,8 +128,8 @@
   border: 2px solid;
   border-bottom: 0;
   border-left: 0;
-  height: 12px;
-  width: 12px;
+  height: 18px;
+  width: 10px;
   position: absolute;
   top: 50%;
   left: calc(50% + 2px);
@@ -186,6 +186,10 @@
   .carousel .carousel-slide-content h2 {
     font-size: 3rem;
     font-weight: 400;
+  }
+  .carousel .carousel-slides-container {
+    position: relative;
+    margin-bottom: 5rem;
   }
   .carousel .carousel-slide-content p {
     font-size: 1rem;

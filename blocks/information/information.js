@@ -61,13 +61,6 @@ export default function informationFun(block) {
         return;
     }
 
- 
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = '/styles/informationFun.css';
-    document.head.appendChild(link);
-
-   
     const quantityContainer = [...block.getElementsByTagName('div')].find(div => div.textContent.trim() === 'Quantity');
     if (quantityContainer) {
         const quantityHandle = createElement('div', 'quantity-handle');

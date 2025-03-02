@@ -112,7 +112,7 @@
 .size-wrapper button:hover, 
 .size-wrapper button.active {
     background: #000;
-    color: #fff;
+    color: #bab5b5;
 }
 .size-buttons button {
     width: 40px;
@@ -151,6 +151,5 @@
 }
 
 .cart-button.disabled {
-   
     cursor: not-allowed;
 }

@@ -2,7 +2,6 @@
   width: 100%; /* Full width of the viewport */
   max-width: 100%;
   overflow: hidden;
-  margin-bottom: 4rem;
 }
 
 .cards .cards-card-body h2 {
@@ -72,6 +71,9 @@
 }
 
 @media (min-width: 900px) {
+  .cards{
+    margin-bottom: 4rem;
+  }
   .cards > ul > li {
     flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
   }
