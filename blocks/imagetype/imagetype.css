@@ -37,8 +37,10 @@
   box-shadow: 4px 4px 10px rgb(128, 210, 237);
   opacity:1;
 }
-.main-images img{
+.main-images img {
   height: 100%;
+  max-width: 600px; /* Limits image width on larger screens */
+  object-fit: contain;
 }
 @media (max-width:900px){
   .imagetype-container {
@@ -66,7 +68,15 @@ width: 100%;
   width: 100%;
 }
 .imagetype-wrapper .block{
-  margin-top: -6rem;
   margin-left: -0.4rem; 
 }
+}
+@media (max-width:360px){
+  .main-images img {
+    max-width: 90%;
+    height: auto;
+}
+  .imagetype-wrapper .block{
+    margin-left: -0.4rem; 
+  }
 }
