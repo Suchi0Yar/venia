@@ -15,7 +15,7 @@ async function fetchData() {
     }
 }
 
-const getProductsPerPage = () => (window.innerWidth <= 360 ? 1 : window.innerWidth <= 600 ? 2 : window.innerWidth <= 900 ? 3 : 5);
+const getProductsPerPage = () => (window.innerWidth <= 360 ? 2: window.innerWidth <= 600 ? 3: window.innerWidth <= 900 ? 4: 5);
 
 function renderProducts(products, startIndex, productWrapper, productsPerPage) {
     productWrapper.innerHTML = products.slice(startIndex, startIndex + productsPerPage).map(item => `
