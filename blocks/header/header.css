@@ -1,4 +1,4 @@
-/* header and nav layout */
+
 header .nav-wrapper {
   background-color: var(--background-color);
   width: 100%;
@@ -174,14 +174,11 @@ header nav .nav-sections ul {
 
 header nav .nav-sections ul > li {
   font-weight: lighter;
-  
-}
+  }
 
 header nav .nav-sections ul > li > ul {
   margin-top: 0;
   padding: .5rem 0rem;
- 
-
 }
 
 header nav .nav-sections ul > li > ul > li {
@@ -200,12 +197,10 @@ header nav .nav-sections ul > li > ul > li {
  .nav-tools div p:nth-of-type(1)::after{
     content:"Search" ;
     font-size: 16px;
-    font-family: sans-serif;
   }
   .nav-tools div p:nth-of-type(2)::after{
     content: "Sign In";
     font-size: 16px;
-    font-family: sans-serif;
   }
   .nav-tools div p{
     display: flex;
