@@ -37,12 +37,6 @@
   box-shadow: 4px 4px 10px rgb(128, 210, 237);
   opacity:1;
 }
-.main-images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
 .main-images img { 
   max-width: 100%; 
   height: auto; 
@@ -70,7 +64,12 @@
   order: 1;
   gap: 20px;
 }
-
+.main-images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
 .main-images img {
   max-width: 80%; 
   height: auto;
