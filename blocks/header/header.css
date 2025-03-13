@@ -5,7 +5,6 @@ header .nav-wrapper {
   z-index: 2;
   padding: 6px;
   position: fixed;
-  font-weight: 400;
   border-bottom: 2px solid lightgray;
 }
 
@@ -22,6 +21,7 @@ header nav {
   height: var(--nav-height);
   padding: 0 24px;
   font-family: var(--body-font-family);
+  font-weight: 700;
 }
 
 header nav[aria-expanded='true'] {
@@ -349,10 +349,13 @@ header nav .nav-tools {
   header .nav-tools .default-content-wrapper ul{
    display: flex;
    flex-wrap: nowrap;
-   border-bottom: 2px solid lightgray;
   }
   header nav .nav-sections {
     margin-left: 0;
+  }
+
+  header nav .nav-sections ul {
+    border-bottom: 2px solid lightgray;
   }
 }
 header .nav-tools .default-content-wrapper ul li{
