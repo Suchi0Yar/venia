@@ -48,8 +48,7 @@
    flex-direction: column;
   }
   .main-images img {
-    max-width: 50%;
-    height: auto;
+    margin-top: -8rem;
   }
   }
 @media (max-width:600px){
