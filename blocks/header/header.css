@@ -341,7 +341,9 @@ header nav .nav-tools {
   header .nav-tools .default-content-wrapper ul{
    display: flex;
   }
-  /* Hide nav-tools outside of the hamburger menu */
+  header nav .nav-sections {
+    margin-left: 0;
+  }
   .nav-tools {
     display: none;
   }
@@ -352,10 +354,6 @@ header nav .nav-tools {
    display: flex;
    flex-wrap: nowrap;
   }
-  header nav .nav-sections {
-    margin-left: 0;
-  }
- 
 }
 header .nav-tools .default-content-wrapper ul li{
   display: flex;
