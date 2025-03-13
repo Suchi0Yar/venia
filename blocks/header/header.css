@@ -331,7 +331,9 @@ header nav .nav-tools {
     gap: 1rem;
     padding-top: 1rem;
   }
-
+  header nav .nav-sections ul {
+    border-bottom: 2px solid lightgray;
+  }
  
   }
 
@@ -343,9 +345,6 @@ header nav .nav-tools {
   .nav-tools {
     display: none;
   }
-  header nav .nav-sections ul {
-    border-bottom: 2px solid lightgray;
-  }
 
 }
 @media (max-width: 360px){
@@ -356,6 +355,7 @@ header nav .nav-tools {
   header nav .nav-sections {
     margin-left: 0;
   }
+ 
 }
 header .nav-tools .default-content-wrapper ul li{
   display: flex;
