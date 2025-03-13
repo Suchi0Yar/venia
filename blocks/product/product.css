@@ -11,8 +11,8 @@
     justify-content: center;
     gap: 10px;
     width: 100vw;
-    max-width: 100%;
-    padding: 0 20px;
+    /* max-width: 100%;
+    padding: 0 20px; */
     overflow: hidden;
     margin: 4rem auto 0 0;
 }
