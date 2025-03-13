@@ -134,7 +134,7 @@ header nav[aria-expanded='true'] .nav-hamburger-icon::after {
 @media (width >= 900px) {
   header nav .nav-hamburger {
     display: none;
-    visibility: hidden;
+    visibility: hidden; 
   }
 }
 
@@ -325,8 +325,6 @@ header nav .nav-tools {
 @media (max-width: 900px) {
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
     position: static; 
-    visibility: hidden;
-    opacity: 0;
   }
   /* Show nav-tools inside the expanded menu */
   header nav[aria-expanded="true"] .nav-tools {
