@@ -27,6 +27,7 @@
 .small-images picture{
   width: 100%;
 }
+
 .small-images img {
   border-radius: 5px;
   height: auto;
@@ -68,6 +69,7 @@ width: 100%;
 }
 .small-images img{
   width: 100%;
+  max-width: 120px;
 }
 .imagetype-wrapper .block{
   margin-left: -0.4rem; 
