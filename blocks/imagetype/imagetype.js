@@ -9,7 +9,7 @@ export default function decorate(block) {
     productMediaWrapper.appendChild(divs[1]);
  
     divs[0].classList.add("small-images");
-    divs[1].classList.add("main-image");
+    divs[1].classList.add("main-images");
  
     block.insertBefore(productMediaWrapper, divs[2]);
 }
