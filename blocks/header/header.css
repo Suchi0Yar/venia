@@ -158,7 +158,6 @@ header nav .nav-sections {
   flex: 1 1 auto;
   display: none;
   visibility: hidden;
-  margin-left: 3rem;
 }
 
 header nav[aria-expanded='true'] .nav-sections {
@@ -170,6 +169,7 @@ header nav[aria-expanded='true'] .nav-sections {
 header nav .nav-sections ul {
   list-style: none;
   padding-left: 0;
+  border-bottom: 2px solid lightgray;
 }
 
 header nav .nav-sections ul > li {
