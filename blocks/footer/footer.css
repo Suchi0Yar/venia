@@ -7,7 +7,7 @@ footer {
 
 footer .footer > div {
   margin: auto;
-  padding: 18px 0 1px;
+  padding: 18px 30px 1px;
 }
 
 footer .footer p {
@@ -18,7 +18,6 @@ footer .footer p {
   display: flex;
   flex-wrap: wrap;
   font-weight: 300;
-  justify-content: flex-start;
  }
 
 /* Footer Sections */
@@ -139,8 +138,13 @@ footer .footer p {
 
 @media (max-width: 600px) {
   .footer-container {
-    justify-content: center;
+    justify-content: flex-start; 
+    padding-left: 0;
     font-size: 14px;
+  }
+  footer .footer > div {
+    margin: 0;
+    padding-left: 0; /* Ensure no left padding */
   }
 
   .footer-section-6 {
@@ -160,8 +164,9 @@ footer .footer p {
 @media (max-width: 360px) {
   .footer-container {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     font-size: 12px;
+    text-align: left;
   }
 
   .footer-section-6 {
