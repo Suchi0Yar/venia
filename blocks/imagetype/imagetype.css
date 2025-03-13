@@ -64,12 +64,6 @@
   order: 1;
   gap: 20px;
 }
-.main-images {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-}
 .main-images img {
   max-width: 80%; 
   height: auto;
