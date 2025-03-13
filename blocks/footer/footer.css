@@ -139,12 +139,10 @@ footer .footer p {
 @media (max-width: 600px) {
   .footer-container {
     justify-content: flex-start; 
-    padding-left: 0;
     font-size: 14px;
   }
   footer .footer > div {
     margin: 0;
-    padding-left: 0; /* Ensure no left padding */
   }
 
   .footer-section-6 {
