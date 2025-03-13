@@ -343,6 +343,7 @@ header nav .nav-tools {
   }
   header nav .nav-sections {
     margin-left: 0;
+    font-size: 10px;
   }
   .nav-tools {
     display: none;
