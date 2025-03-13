@@ -24,14 +24,16 @@
   display: flex;
   flex-direction: column;
 } 
-.small-images img{
+.small-images picture{
+  width: 100%;
+}
+.small-images img {
   border-radius: 5px;
-  height: 90%;
-  width:400px;
+  height: auto;
   border: 1px solid gray;
-  margin-bottom: 9px;
   cursor: pointer;
   opacity: 0.7;
+  max-width: 550px;
 }
 .small-images img:hover{
   box-shadow: 4px 4px 10px rgb(128, 210, 237);
@@ -39,7 +41,7 @@
 }
 .main-images img {
   height: 100%;
-  max-width: 600px; /* Limits image width on larger screens */
+  max-width: 600px;
   object-fit: contain;
 }
 @media (max-width:900px){

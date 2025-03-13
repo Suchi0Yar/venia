@@ -131,6 +131,7 @@
         flex-wrap: wrap;
         justify-content: center;
         gap: 5px;
+        margin-right: 15px;
     }
     .product-item {
         width: calc(50% - 5px);
