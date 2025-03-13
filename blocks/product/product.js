@@ -10,7 +10,7 @@ async function fetchData() {
         const data = await response.json();
         return Array.isArray(data.data) ? data.data : Promise.reject("Invalid JSON format: Expected 'data' array.");
     } catch (error) {
-        console.error("❌ Error fetching data:", error);
+        console.error("Error fetching data:", error);
         return null;
     }
 }
@@ -56,8 +56,8 @@ export default async function decorate(block) {
     if (!products) return (block.innerHTML = `<p class="error-message">Failed to load data.</p>`);
     
     block.innerHTML = "";
-    // const carouselContainer = document.createElement("div");
-    // carouselContainer.className = "carousel-container";
+    const carouselContainer = document.createElement("div");
+    carouselContainer.className = "carousel-container";
     
     const productWrapper = document.createElement("div");
     productWrapper.className = "product-wrapper";
