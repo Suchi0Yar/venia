@@ -10,6 +10,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 8px;
+    width:95vw;
     overflow: hidden;
     margin: 4rem auto 0 0;
 }
