@@ -56,8 +56,8 @@ export default async function decorate(block) {
     if (!products) return (block.innerHTML = `<p class="error-message">Failed to load data.</p>`);
     
     block.innerHTML = "";
-    const carouselContainer = document.createElement("div");
-    carouselContainer.className = "carousel-container";
+    // const carouselContainer = document.createElement("div");
+    // carouselContainer.className = "carousel-container";
     
     const productWrapper = document.createElement("div");
     productWrapper.className = "product-wrapper";
