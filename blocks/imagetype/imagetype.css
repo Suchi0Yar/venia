@@ -64,9 +64,8 @@
   order: 1;
   gap: 20px;
 }
-.main-images img {
-  max-width: 80%; 
-  height: auto;
+.main-images{
+width: 100%;
 }
 .small-images img{
   width: 100%;
@@ -77,9 +76,9 @@
 }
 @media (max-width:360px){
   .main-images img {
-    max-width: 70%;
-    height: auto;
-  }
+    width: 90%;
+    max-width: 400px;
+}
   .imagetype-wrapper .block{
     margin-left: -0.4rem; 
   }
